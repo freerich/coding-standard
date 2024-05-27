@@ -58,7 +58,6 @@ class ClassStructureSniff implements Sniff
 	private const GROUP_PRIVATE_PROPERTIES = 'private properties';
 	private const GROUP_PRIVATE_STATIC_PROPERTIES = 'private static properties';
 	private const GROUP_CONSTRUCTOR = 'constructor';
-	private const GROUP_INVOKE_METHOD = 'invoke method';
 	private const GROUP_STATIC_CONSTRUCTORS = 'static constructors';
 	private const GROUP_DESTRUCTOR = 'destructor';
 	private const GROUP_MAGIC_METHODS = 'magic methods';
@@ -154,7 +153,6 @@ class ClassStructureSniff implements Sniff
 			self::GROUP_SHORTCUT_STATIC_METHODS,
 			self::GROUP_CONSTRUCTOR,
 			self::GROUP_DESTRUCTOR,
-			self::GROUP_INVOKE_METHOD,
 			self::GROUP_PUBLIC_METHODS,
 			self::GROUP_PROTECTED_METHODS,
 			self::GROUP_PRIVATE_METHODS,
@@ -176,7 +174,7 @@ class ClassStructureSniff implements Sniff
 		'__serialize' => self::GROUP_MAGIC_METHODS,
 		'__unserialize' => self::GROUP_MAGIC_METHODS,
 		'__tostring' => self::GROUP_MAGIC_METHODS,
-		'__invoke' => self::GROUP_INVOKE_METHOD,
+		'__invoke' => self::GROUP_MAGIC_METHODS,
 		'__set_state' => self::GROUP_MAGIC_METHODS,
 		'__clone' => self::GROUP_MAGIC_METHODS,
 		'__debuginfo' => self::GROUP_MAGIC_METHODS,
@@ -578,7 +576,6 @@ class ClassStructureSniff implements Sniff
 				self::GROUP_CONSTRUCTOR,
 				self::GROUP_STATIC_CONSTRUCTORS,
 				self::GROUP_DESTRUCTOR,
-				self::GROUP_INVOKE_METHOD,
 				self::GROUP_PUBLIC_METHODS,
 				self::GROUP_PUBLIC_STATIC_METHODS,
 				self::GROUP_PROTECTED_METHODS,
